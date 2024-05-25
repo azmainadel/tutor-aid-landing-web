@@ -10,7 +10,7 @@ site:
 metadata:
   title:
     default: Tutor Aid
-    template: '%s — AstroWind'
+    template: '%s — Tutor Aid'
   description: "\U0001F680 Streamline your tuition management and payment process with our cutting-edge SaaS tool."
   robots:
     index: true

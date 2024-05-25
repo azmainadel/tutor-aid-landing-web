@@ -1,0 +1,67 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Features from '~/components/widgets/Features.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Button from '~/components/ui/Button.astro';
+import Image from '~/components/common/Image.astro';
+
+import { featuresContent, featuresImage } from '~/content/features';
+import { appStoreImg, appStoreDownloadLink, googlePlayImg, googlePlayDownloadLink } from '~/content/links';
+
+const metadata = {
+  title: 'Features',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+
+  <HeroText
+    tagline="Features"
+    title="Learn the Powers of Tutor Aid!"
+    subtitle="Choose the perfect plan that aligns with your goals."
+  />
+
+  <!-- Features Left Widget **************** -->
+
+  <Features
+    items={featuresContent.left}
+    image={featuresImage.left}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features>
+
+  <!-- Features Right Widget **************** -->
+
+  <Features
+    isReversed
+    isAfterContent
+    items={featuresContent.right}
+    image={featuresImage.right}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features>
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    id="download"
+    title="Download our app now!"
+    subtitle="Sign up in a flash and get ready to go! 🚀"
+  >
+    <div slot="actions" class="flex max-w-sm gap-4">
+      <Button variant="link" target="_blank" rel="noopener noreferrer" href={appStoreDownloadLink}>
+        <Image src={appStoreImg} alt="App Store Image" width={200} />
+      </Button>
+
+      <Button variant="link" target="_blank" rel="noopener noreferrer" href={googlePlayDownloadLink}>
+        <Image src={googlePlayImg} alt="Google Play Image" width={200} />
+      </Button>
+    </div>
+  </CallToAction>
+</Layout>

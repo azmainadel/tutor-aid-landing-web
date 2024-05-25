@@ -1,10 +1,10 @@
-import { getPermalink, getAsset } from './utils/permalinks';
+import { getPermalink } from './utils/permalinks';
 
 export const headerData = {
   links: [
     {
       text: 'Features',
-      href: getPermalink('/#features'),
+      href: getPermalink('/features'),
     },
     {
       text: 'Pricing',
@@ -19,7 +19,7 @@ export const headerData = {
       href: getPermalink('/contact'),
     },
   ],
-  actions: [{ text: 'Download', href: 'https://github.com/onwidget/astrowind', target: '_blank' }],
+  actions: [{ text: 'See Demo', href: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ', target: '_blank', rel: "noopener noreferrer"}],
 };
 
 export const footerData = {
