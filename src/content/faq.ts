@@ -1,6 +1,6 @@
 export const faqContent = [
   {
-    title: 'Why AstroWind?',
+    title: 'Why Tutor Aid?',
     description:
       "Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law. Here he comes Here comes Speed Racer. He's a demon on wheels.",
   },
